@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<div lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Plant Store</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <a href = "index.html"><img src="images.png" width="70px"/>
+            <a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username" id="username">
+                            <input type="password" placeholder="Password" id="password">
+                            <button type="submit" class="btn">Log In</button>
+                        </form>
+
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username" >
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="bt">Log In</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <img src="Daco_5903205.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var Indicator = document.getElementById("Indicator");
+
+    function register(){
+    RegForm.style.transform ="translateX(0px)";
+    LoginForm.style.transform ="translateX(0px)";
+    Indicator.style.transform = "translateX(100px)";
+}
+function login(){
+    RegForm.style.transform="translateX(300px)";
+    LoginForm.style.transform="translateX(300px)";
+    Indicator.style.transform = "translateX(0px)";
+}
+
+<script src = "login.js"></script>
+</script>
+</body>
+</html>
